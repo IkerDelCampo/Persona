@@ -13,8 +13,9 @@ import persona.Persona;
  */
 public class Empleado extends Persona{
     //Atributos
-    int idEmpleado;
-    double sueldo;
+    private int idEmpleado;
+    private double sueldo;
+    private static int contador;
     //getter y setter
 
     public int getIdEmpleado() {
@@ -28,5 +29,28 @@ public class Empleado extends Persona{
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }
+    public Empleado(){
+        this.idEmpleado = ++Empleado.contador;//preincrementar el valor a uno de ahi ir sumando uno cad avez que creamos un empleado
+    }
+    public Empleado(String nombre, double sueldo){
+        this();
+        this.nombre= nombre;
+        this.sueldo=sueldo;
+    }
+    public Empleado(double sueldo, String nombre, String direccion, char genero, int edad) {
+        //super(nombre,direccion,genero,edad);
+        this.sueldo = sueldo;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.genero = genero;
+        this.edad = edad;
+        this.idEmpleado = ++Empleado.contador;//preincrementar el valor a uno de ahi ir sumando uno cad avez que creamos un empleado
+    }
+
+    @Override
+    public String toString() {
+        return "Empleado{" + "idEmpleado=" + idEmpleado + ", sueldo=" + sueldo + "nombre=" + super.getNombre() + ", direccion=" + super.getDireccion() + ", genero=" + super.getGenero() + ", edad=" + super.getEdad() +'}';
+    }
+    
     
 }
