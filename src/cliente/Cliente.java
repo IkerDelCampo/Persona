@@ -20,13 +20,14 @@ public class Cliente extends Persona{
     //constructor
 
     public Cliente(int idCliente, Date fechaRegistro, boolean vip,String nombre, String direccion, char genero, int edad) {
+        super(nombre,direccion,genero,edad);
         this.idCliente = idCliente;
         this.fechaRegistro = fechaRegistro;
         this.vip = vip;
-        this.nombre = nombre;
+        /*this.nombre = nombre;
         this.direccion = direccion;
         this.genero = genero;
-        this.edad = edad;
+        this.edad = edad;*/
     }
     /*public Cliente(String nombre, String dirección, char genero, int edad) {
         this.nombre = nombre;

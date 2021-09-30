@@ -50,6 +50,13 @@ public class Persona {
         this.edad = edad;
     }
     //Constructor
+
+    public Persona(String nombre, String direccion, char genero, int edad) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.genero = genero;
+        this.edad = edad;
+    }
     
     public static void main(String[] args) {
         Cliente C1 = new Cliente(1,new Date("02/7/1560"),true, "Pepe","C/Alcaparra",'f',32);
@@ -58,8 +65,8 @@ public class Persona {
         System.out.println(E1);
         Empleado E2 = new Empleado(3000,"Alias","C/Melena65",'f',80);
         System.out.println(E2);
-        Empleado E3 = new Empleado("Juan", 22000);
-        System.out.println(E3);
+        /*Empleado E3 = new Empleado("Juan", 22000);
+        System.out.println(E3);*/
         //C1.setGenero('f');//CON COMILLAS SIMPLES
     }
     

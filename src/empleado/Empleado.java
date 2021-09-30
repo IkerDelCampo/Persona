@@ -29,21 +29,21 @@ public class Empleado extends Persona{
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }
-    public Empleado(){
-        this.idEmpleado = ++Empleado.contador;//preincrementar el valor a uno de ahi ir sumando uno cad avez que creamos un empleado
-    }
-    public Empleado(String nombre, double sueldo){
-        this();
+    /*public Empleado(){
+       this.idEmpleado = ++Empleado.contador;//preincrementar el valor a uno de ahi ir sumando uno cad avez que creamos un empleado
+    }*/
+    /*public Empleado(String nombre, double sueldo){
+        //this();
         this.nombre= nombre;
         this.sueldo=sueldo;
-    }
+    }*/
     public Empleado(double sueldo, String nombre, String direccion, char genero, int edad) {
-        //super(nombre,direccion,genero,edad);
+        super(nombre,direccion,genero,edad);
         this.sueldo = sueldo;
-        this.nombre = nombre;
+        /*this.nombre = nombre;
         this.direccion = direccion;
         this.genero = genero;
-        this.edad = edad;
+        this.edad = edad;*/
         this.idEmpleado = ++Empleado.contador;//preincrementar el valor a uno de ahi ir sumando uno cad avez que creamos un empleado
     }
 
